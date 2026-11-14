@@ -1,23 +1,40 @@
-PROJECT : DF-001
+PROJECT: DF-001
 
-Evidence ID : E001
-Artifact : Windows Security Event Log
-Date/Time : 16/09/2026 | 9:45:01 PM
+EVIDENCE ID: E001
 
-Subject : Security ID:		PC01\91629
-	  Account Name:		91629
-	  Account Domain:	PC01
-	  Logon ID:		0x79032
-	  Read Operation:	Enumerate Credentials
+ARTIFACT: Windows Security Event Log
 
-Event ID : 5379
-Source : Microsoft Windows Security Auditing
-Level : Information
-Task Category : User Account Manager
-User : N/A ( Not Applicable )
-Keyword : Audit Success
-Computer Name : PC01.kolkata.pwd.com
-Observational Information : Windows Security auditing recorded a read operation involving stored credentials in Credential Manager.
-Potential Relevance : this records credential-related activity on the Windows system.
-Limitation : This event alone does not establish why the credential was read or which person physically performed the activity.
- 
+DATE/TIME: 16/09/2026 | 9:45:01 PM
+
+Subject Information
+
+- Security ID / Account: [REDACTED]
+- Account Domain: [REDACTED]
+- Logon ID: [REDACTED]
+- Read Operation: Enumerate Credentials
+
+Event Details
+
+- Event ID: 5379
+- Source: Microsoft Windows Security Auditing
+- Level: Information
+- Task Category: User Account Manager
+- User: N/A (Not Applicable)
+- Keyword: Audit Success
+- Computer Name: [REDACTED]
+
+Observational Information
+
+Windows Security auditing recorded a read operation involving stored credentials in Credential Manager.
+
+Potential Relevance
+
+This event records credential-related activity on the Windows system and may assist in understanding account-related activity during the investigation period.
+
+Limitation
+
+This event alone does not establish why the credentials were read, which specific individual initiated the operation, or who was physically operating the computer.
+
+Forensic Interpretation
+
+Event ID 5379 documents a successful audited Credential Manager read operation. Further correlation with other Windows Security events and relevant system artifacts would be required to establish additional context.
