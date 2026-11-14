@@ -1,0 +1,23 @@
+PROJECT : DF-001
+
+Evidence ID : E001
+Artifact : Windows Security Event Log
+Date/Time : 16/09/2026 | 9:45:01 PM
+
+Subject : Security ID:		PC01\91629
+	  Account Name:		91629
+	  Account Domain:	PC01
+	  Logon ID:		0x79032
+	  Read Operation:	Enumerate Credentials
+
+Event ID : 5379
+Source : Microsoft Windows Security Auditing
+Level : Information
+Task Category : User Account Manager
+User : N/A ( Not Applicable )
+Keyword : Audit Success
+Computer Name : PC01.kolkata.pwd.com
+Observational Information : Windows Security auditing recorded a read operation involving stored credentials in Credential Manager.
+Potential Relevance : this records credential-related activity on the Windows system.
+Limitation : This event alone does not establish why the credential was read or which person physically performed the activity.
+ 

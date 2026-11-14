@@ -1,0 +1,8 @@
+Evidence Examination 002 :
+
+9:45:24 PM | Security Log | Special Logon event | Windows Security | Recorded special-logon activity | Event ID-4672
+
+Evidence Examination 003 :
+
+9:59:12 PM | Security Log | Event ID 4624 Logon | Windows Security | Recorded successful logon activity
+

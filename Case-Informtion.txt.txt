@@ -1,0 +1,25 @@
+CASE ID: DF-001
+
+CASE NAME:
+Suspicious Windows Activity Investigation
+
+INVESTIGATOR:
+Disha Ghosh
+
+SYSTEM:
+Windows 10
+
+PURPOSE:
+Investigate and document recorded activity on a Windows
+workstation in a controlled laboratory environment.
+
+INVESTIGATION QUESTIONS:
+
+1. What recorded activity occurred?
+2. When did the activity occur?
+3. Which Windows artifacts can provide relevant information?
+4. Was a removable device involved?
+5. Was any program executed?
+6. What websites or browser activity can be identified?
+7. Can the available evidence identify the person responsible?
+8. What are the limitations of the available evidence?
