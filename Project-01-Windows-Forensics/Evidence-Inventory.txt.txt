@@ -1,31 +1,59 @@
 CASE ID: DF-001
+
 CASE NAME: Windows Digital Forensics Investigation
 
 EVIDENCE INVENTORY
 
+1. Evidence Register
+
 Evidence ID: E001
-File Name: Security.evtx
-Evidence Type: Windows Security Event Log
-Source: Windows 10 laboratory virtual machine
-Purpose: Examination of recorded Windows security-related events
-Integrity: SHA-256 hash recorded in Hash-Verification.txt
+
+- File Name: Security.evtx
+- Evidence Type: Windows Security Event Log
+- Source: Windows 10 laboratory virtual machine
+- Purpose: Examination of recorded Windows security-related events
+- Integrity: SHA-256 hash recorded in Hash-Verification.txt.txt
 
 Evidence ID: E002
-File Name: System.evtx
-Evidence Type: Windows System Event Log
-Source: Windows 10 laboratory virtual machine
-Purpose: Examination of recorded Windows system events
-Integrity: SHA-256 hash recorded in Hash-Verification.txt
+
+- File Name: System.evtx
+- Evidence Type: Windows System Event Log
+- Source: Windows 10 laboratory virtual machine
+- Purpose: Examination of recorded Windows system events
+- Integrity: SHA-256 hash recorded in Hash-Verification.txt.txt
 
 Evidence ID: E003
-File Name: Application.evtx
-Evidence Type: Windows Application Event Log
-Source: Windows 10 laboratory virtual machine
-Purpose: Examination of recorded application-related events
-Integrity: SHA-256 hash recorded in Hash-Verification.txt
 
-NOTE:
-The evidence files were exported from the Windows 10 laboratory
-environment using PowerShell. The files were hashed using SHA-256
-for integrity verification. The investigation was conducted in
-a controlled laboratory environment.
+- File Name: Application.evtx
+- Evidence Type: Windows Application Event Log
+- Source: Windows 10 laboratory virtual machine
+- Purpose: Examination of recorded application-related events
+- Integrity: SHA-256 hash recorded in Hash-Verification.txt.txt
+
+2. Evidence Collection and Handling
+
+The Windows event-log files were exported from the Windows 10 laboratory environment using PowerShell.
+
+SHA-256 hashes were calculated for the exported evidence files to support integrity verification.
+
+The original evidence files are retained in the local laboratory evidence directory and are not included in this public GitHub repository.
+
+3. Evidence Integrity
+
+The calculated SHA-256 hash values are documented in:
+
+"Hash-Verification.txt.txt"
+
+These values can be used for subsequent integrity comparisons.
+
+4. Investigation Environment
+
+- Operating System: Windows 10
+- Environment: Controlled laboratory virtual machine
+- Investigation Type: Windows Digital Forensics
+
+5. Evidence Handling Note
+
+The evidence was handled as part of an educational digital forensics investigation. The documentation reflects the evidence collection, examination and integrity verification activities performed during the investigation.
+
+CASE ID: DF-001
