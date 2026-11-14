@@ -1,104 +1,90 @@
 CASE ID: DF-001
 
-CASE NAME:
-Suspicious Windows Activity Investigation
+CASE NAME: Suspicious Windows Activity Investigation
 
-INVESTIGATOR:
-Disha Ghosh
+INVESTIGATOR: Disha Ghosh
 
-SYSTEM:
-Windows 10
+SYSTEM: Windows 10
 
-==================================================
-1. INVESTIGATION PURPOSE
-==================================================
+1. EXECUTIVE SUMMARY
 
-The purpose of this investigation was to examine a Windows
-workstation and identify recorded system activity using
-selected Windows forensic artifacts.
+This investigation examined selected Windows forensic artifacts to identify and document recorded system activity during the investigation period.
 
-The investigation focused on understanding the timing and
-nature of recorded activity and determining what conclusions
-could reasonably be supported by the available evidence.
+The examination identified credential-related activity and Windows Security events, including a Special Logon event and a successful Windows Logon event.
 
-==================================================
-2. EVIDENCE EXAMINED
-==================================================
+The findings document recorded operating system activity but do not independently establish the identity or intent of the individual physically operating the workstation.
 
-E001 - Windows Security Event Logs
-E002 - Windows Registry Artifacts
-E003 - Windows Prefetch Artifacts
-E004 - Browser Artifacts
-E005 - USB/Removable Device Artifacts
+2. INVESTIGATION PURPOSE
 
-Note:
-Not all listed artifacts were necessarily available or
-examined in this controlled laboratory investigation.
-Findings are based only on the artifacts actually examined.
+The purpose of this investigation was to examine a Windows workstation and identify recorded system activity using selected Windows forensic artifacts.
 
-==================================================
-3. METHODOLOGY
-==================================================
+The investigation focused on understanding the timing and nature of recorded activity and determining what conclusions could reasonably be supported by the available evidence.
 
-The investigation was performed in a controlled Windows 10
-laboratory environment.
+3. EVIDENCE EXAMINED
 
-Relevant Windows Security event logs were exported and
-examined.
+The investigation documentation identifies the following potential evidence categories:
 
-The exported evidence files were hashed using SHA-256 to
-support integrity verification.
+- E001 – Windows Security Event Logs
+- E002 – Windows Registry Artifacts
+- E003 – Windows Prefetch Artifacts
+- E004 – Browser Artifacts
+- E005 – USB/Removable Device Artifacts
 
-Selected Windows Security events were reviewed and recorded
-in separate examination notes.
+Evidence scope note: These categories should not be interpreted as confirmation that every artifact was collected or examined. Findings in this report are limited to the artifacts actually examined and documented.
 
-The observed events were then organized chronologically
-in a timeline and correlated during analysis.
+4. METHODOLOGY
 
-==================================================
-4. FINDINGS
-==================================================
+The investigation was performed in a controlled Windows 10 laboratory environment.
 
-The examined Windows Security logs contained recorded
-credential-related activity.
+The examination process included:
 
-A Special Logon event was recorded at approximately
-9:45:24 PM on 16 September 2026.
+1. Reviewing available Windows Security event logs.
+2. Exporting relevant event-log evidence.
+3. Calculating SHA-256 hashes for exported evidence files.
+4. Examining selected Windows Security events.
+5. Recording observations in separate event examination documents.
+6. Organizing observed events chronologically in a timeline.
+7. Correlating available observations during analysis.
 
-A successful Windows Logon event (Event ID 4624) was
-recorded at approximately 9:59:12 PM on 16 September 2026.
+5. KEY FINDINGS
 
-These events provide information about recorded Windows
-activity during the investigation period.
+The examined Windows Security logs contained recorded credential-related activity.
 
-==================================================
-5. TIMELINE
-==================================================
+The following events were documented:
 
-The detailed timeline is documented in:
+Finding 01 – Special Logon
 
-Timeline.txt
+- Event description: Special Logon
+- Date: 16 September 2026
+- Recorded time: Approximately 9:45:24 PM
 
-The timeline records the observed events and their
-corresponding timestamps and sources.
+Finding 02 – Successful Windows Logon
 
-==================================================
-6. ANALYSIS
-==================================================
+- Event ID: 4624
+- Event description: Successful Windows Logon
+- Date: 16 September 2026
+- Recorded time: Approximately 9:59:12 PM
 
-The examined Windows artifacts were reviewed and correlated
-to identify recorded system activity during the investigation
-period.
+These events provide information about recorded Windows activity during the investigation period.
+
+6. EVENT TIMELINE
+
+The chronological event details are documented in:
+
+"Timeline.txt.txt"
+
+The timeline records the observed events, corresponding timestamps and evidence sources.
+
+7. ANALYSIS
+
+The examined Windows artifacts were reviewed and correlated to identify recorded system activity during the investigation period.
 
 The available evidence indicates:
 
 1. Windows Security logs recorded credential-related activity.
-2. A Special Logon event was recorded during the investigation
-   period.
-3. A successful Windows Logon event was recorded at approximately
-   9:59 PM.
-4. The examined events provide information about recorded
-   Windows activity during the investigation period.
+2. A Special Logon event was recorded during the investigation period.
+3. A successful Windows Logon event was recorded at approximately 9:59 PM.
+4. The examined events provide information about recorded Windows activity during the investigation period.
 
 The evidence does not independently establish:
 
@@ -106,51 +92,35 @@ The evidence does not independently establish:
 2. The intent behind the recorded activity.
 3. That any particular file or information was stolen or transferred.
 
-==================================================
-7. LIMITATIONS
-==================================================
+8. INVESTIGATION LIMITATIONS
 
-1. The investigation was performed in a controlled laboratory
-   environment.
+1. The investigation was performed in a controlled laboratory environment.
+2. Individual Windows events provide only part of the overall activity.
+3. The available evidence does not independently establish the identity of the physical computer operator.
+4. Additional artifacts and independent correlation would be required to support stronger conclusions.
 
-2. Individual Windows events provide only part of the overall
-   activity.
-
-3. The examined evidence does not independently establish the
-   identity of the person operating the computer.
-
-4. Additional artifacts would be required for stronger
-   correlation and investigation.
-
-==================================================
-8. CONCLUSION
-==================================================
-
-The investigation identified and documented several recorded
-Windows Security events during the examination period.
-
-The evidence supports the existence and timing of recorded
-Windows activity. However, the available evidence does not
-independently establish who was physically operating the
-computer or the intent behind the recorded activity.
-
-The findings should therefore be interpreted within the
-limitations of the available laboratory evidence.
-
-==================================================
 9. HASH VERIFICATION
-==================================================
 
-SHA-256 hashes were calculated for the exported Windows
-Security, System, and Application event-log files.
+SHA-256 hashes were calculated for the exported Windows Security, System and Application event-log files.
 
-The recorded hash values are documented in:
+The recorded hash values and verification documentation are available in:
 
-07_Hashes\Hash-Verification.txt
+"Hash-Verification.txt.txt"
 
-The hashes can be used to verify whether the examined
-evidence files remain unchanged between comparison points.
+These hashes support integrity verification by allowing the calculated values to be compared against the recorded reference values.
 
-==================================================
+10. CONCLUSION
+
+The investigation identified and documented several recorded Windows Security events during the examination period.
+
+The evidence supports the existence and timing of recorded Windows activity. However, the available evidence does not independently establish who was physically operating the computer or the intent behind the recorded activity.
+
+The findings should therefore be interpreted within the limitations of the available laboratory evidence.
+
+Further examination of additional digital artifacts would be necessary to establish stronger correlations and support more detailed conclusions.
+
+---
+
 END OF REPORT
-==================================================
+
+CASE ID: DF-001
