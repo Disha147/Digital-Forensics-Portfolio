@@ -1,29 +1,64 @@
-PROJECT : DF-001
+PROJECT: DF-001
 
-Evidence ID : E002
-Artifact : Windows Security Event Log
-Date/Time : 16/09/2026 | 9:45:24 PM
-Event ID : 4672
+EVIDENCE ID: E002
 
-Subject : Security ID:		SYSTEM
-	  Account Name:		SYSTEM
-	  Account Domain:	NT AUTHORITY
-	  Logon ID:		0x3E7
+ARTIFACT: Windows Security Event Log
 
-Privileges:		SeAssignPrimaryTokenPrivilege
-			SeTcbPrivilege
-			SeSecurityPrivilege
-			SeTakeOwnershipPrivilege
-			SeLoadDriverPrivilege
-			SeBackupPrivilege
-			SeRestorePrivilege
-			SeDebugPrivilege
-			SeAuditPrivilege
-			SeSystemEnvironmentPrivilege
-			SeImpersonatePrivilege
-			SeDelegateSessionUserImpersonatePrivilege
+DATE/TIME: 16/09/2026 | 9:45:24 PM
 
-Observed Information : The windows security log records a Special Logon event at approximate 9:45:24 PM. The event shows Audit Success and includes information about the subject account and privileges assigned to the logon.
-Potential Relevance : This may provide useful information about a logon session that received special privileges. The account and privilege information can be correlated with other Windows security events to understand the activity occurring during investigation period.
-Limitation : This event alone does not establish who was physically using the computer or the reason for the activity. Additional evidence and correlation with other artifcts would be required to determine the context of the activity.   
+Event Details
 
+- Event ID: 4672
+- Event Description: Special Logon
+- Source: Microsoft Windows Security Auditing
+- Audit Result: Audit Success
+
+Subject Information
+
+- Security ID: SYSTEM
+- Account Name: SYSTEM
+- Account Domain: NT AUTHORITY
+- Logon ID: 0x3E7
+
+Assigned Special Privileges
+
+The event recorded the following privileges:
+
+- SeAssignPrimaryTokenPrivilege
+- SeTcbPrivilege
+- SeSecurityPrivilege
+- SeTakeOwnershipPrivilege
+- SeLoadDriverPrivilege
+- SeBackupPrivilege
+- SeRestorePrivilege
+- SeDebugPrivilege
+- SeAuditPrivilege
+- SeSystemEnvironmentPrivilege
+- SeImpersonatePrivilege
+- SeDelegateSessionUserImpersonatePrivilege
+
+Observational Information
+
+Windows Security auditing recorded a Special Logon event at approximately 9:45:24 PM on 16 September 2026.
+
+The event indicates that special privileges were assigned to the SYSTEM logon session. The recorded audit result was Audit Success.
+
+Potential Relevance
+
+This event provides information about a logon session associated with special privileges.
+
+The recorded account and privilege information can be correlated with other Windows Security events to understand the activity occurring during the investigation period.
+
+Limitation
+
+This event alone does not establish who was physically using the computer or the reason for the activity.
+
+The presence of special privileges does not independently indicate malicious or unauthorized activity. Additional evidence and correlation with other artifacts would be required to determine the context.
+
+Forensic Interpretation
+
+Event ID 4672 documents the assignment of special privileges to a logon session. In this examination, the subject was identified as the SYSTEM account.
+
+The event should be interpreted in the context of normal Windows operating system activity and correlated with other relevant events before drawing further conclusions.
+
+CASE ID: DF-001
