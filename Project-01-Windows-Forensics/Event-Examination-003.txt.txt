@@ -1,83 +1,100 @@
-PROJECT : DF001
-Evidence : 003
-Log Name : Security
-Artifact : Windows Security Event Log
-Date/Time : 16/09/2026 | 9:59:12 PM
+PROJECT: DF-001
 
-Subject : Security ID:		SYSTEM
-	  Account Name:		PC01$
-	  Account Domain:	KOLKATA
-	  Logon ID:		0x3E7
+EVIDENCE ID: E003
 
-Logon Information: Logon Type:		        5
-	           Restricted Admin Mode:	-
-	           Virtual Account:		No
-	           Elevated Token:		Yes
+LOG NAME: Security
 
-Impersonation Level: Impersonation
+ARTIFACT: Windows Security Event Log
 
-New Logon:
-	Security ID:		SYSTEM
-	Account Name:		SYSTEM
-	Account Domain:		NT AUTHORITY
-	Logon ID:		0x3E7
-	Linked Logon ID:		0x0
-	Network Account Name:	-
-	Network Account Domain:	-
-	Logon GUID:		{00000000-0000-0000-0000-000000000000}
+DATE/TIME: 16/09/2026 | 9:59:12 PM
 
+1. EVENT DETAILS
 
-Process Information:
-	Process ID:		0x2f8
-	Process Name:		C:\Windows\System32\services.exe
+- Event ID: 4624
+- Event Description: Successful Logon
+- Source: Microsoft Windows Security Auditing
+- Level: Information
+- Task Category: Logon
+- Keywords: Audit Success
+- User: N/A
 
-Network Information:
-	Workstation Name:	-
-	Source Network Address:	-
-	Source Port:		-
+2. SUBJECT INFORMATION
 
-Detailed Authentication Information:
-	Logon Process:		Advapi  
-	Authentication Package:	Negotiate
-	Transited Services:	-
-	Package Name (NTLM only):	-
-	Key Length:		0
+- Security ID: SYSTEM
+- Account Name: [REDACTED]
+- Account Domain: [REDACTED]
+- Logon ID: 0x3E7
 
-This event is generated when a logon session is created. It is generated on the computer that was accessed.
+3. LOGON INFORMATION
 
-The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+- Logon Type: 5
+- Restricted Admin Mode: Not Applicable
+- Virtual Account: No
+- Elevated Token: Yes
+- Impersonation Level: Impersonation
 
-The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+4. NEW LOGON INFORMATION
 
-The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+- Security ID: SYSTEM
+- Account Name: SYSTEM
+- Account Domain: NT AUTHORITY
+- Logon ID: 0x3E7
+- Linked Logon ID: 0x0
+- Network Account Name: Not Available
+- Network Account Domain: Not Available
+- Logon GUID: {00000000-0000-0000-0000-000000000000}
 
-The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+5. PROCESS INFORMATION
 
-The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+- Process ID: 0x2f8
+- Process Name: C:\Windows\System32\services.exe
 
-The authentication information fields provide detailed information about this specific logon request.
-	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
-	- Transited services indicate which intermediate services have participated in this logon request.
-	- Package name indicates which sub-protocol was used among the NTLM protocols.
-	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+6. NETWORK INFORMATION
 
-Event ID : 4624
-Level : Information
-Task Category : Logon
-Keywords : Audit Success
-User : N/A
-Computer : PC01.kolkata.pwd.com 
+- Workstation Name: Not Available
+- Source Network Address: Not Available
+- Source Port: Not Available
 
-Observation Information : The Windows Security log records a successful logon event at approximately 9:59:12 PM. The event contains information about the subject, new logon, logon process, network information, and authentication details.
+7. AUTHENTICATION INFORMATION
 
-Potential Relevance : This event may help establish the timing and characteristics of a Windows logon session. The account, authentication, and network information can be correlated with other Windows artifacts to understand activity during the investigation period.
+- Logon Process: Advapi
+- Authentication Package: Negotiate
+- Transited Services: Not Available
+- Package Name (NTLM Only): Not Available
+- Key Length: 0
 
-Limitation : This event records a Windows logon session but does not, by itself, establish the identity of the person who was physically operating the computer or the purpose of the session. 
+8. OBSERVATIONAL INFORMATION
 
+Windows Security auditing recorded a successful logon event at approximately 9:59:12 PM on 16 September 2026.
 
+The event contains information about the subject account, newly created logon session, logon type, process information, and authentication details.
 
+The recorded Logon Type 5 indicates a service logon.
 
+The process associated with the event was:
 
+C:\Windows\System32\services.exe
 
+9. POTENTIAL RELEVANCE
 
+This event provides information about the creation of a Windows service logon session.
 
+The account information, process details, authentication package, and timestamp may be correlated with other Windows Security events and system artifacts to understand service-related activity during the investigation period.
+
+10. LIMITATIONS
+
+1. This event records a Windows service logon session and does not establish an interactive user login.
+2. It does not independently establish the identity of the person physically operating the computer.
+3. It does not establish the purpose or intent behind the service activity.
+4. No source network address was recorded in the examined event.
+5. Additional evidence and event correlation would be required to establish further context.
+
+11. FORENSIC INTERPRETATION
+
+Event ID 4624 documents a successful Windows logon session.
+
+In this examination, Logon Type 5 identifies the session as a service logon. The SYSTEM account and services.exe process provide additional context about the recorded operating system activity.
+
+The event should be interpreted as service-related activity rather than evidence of a human interactive login.
+
+CASE ID: DF-001
